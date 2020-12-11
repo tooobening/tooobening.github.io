@@ -15,7 +15,11 @@
         <link rel="stylesheet" href="css/style.css">
         <!--you can also place internal styles here;
              place these within <style> tags-->
-        
+        <script>
+            function myFunction(){
+                alert("My alert!");
+            }
+        </script>
     </head>
     <body>
         <!--put your initial page content here-->
@@ -29,9 +33,9 @@
             <nav class="nav">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="#services" class="nav__link">My services</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">What I do</a></li>
                     <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
-                    <li class="nav__item"><a href="#work" class="nav__link">My work</a></li>
+                    <li class="nav__item"><a href="#work" class="nav__link">Project</a></li>
 
                 </ul>
             </nav>
@@ -51,42 +55,45 @@
             <h2 class="section__title section__title--services">What I do</h2>
             <div class="services">
                 <div class="service">
-                    <h3>GIS data analysis</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make 
-                    a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged.</p>
+                    <h3>GIS data</br>analysis</h3>
+                    <p>use Pyhton to do data processing, mainly expert in package: GeoPandas, Pandas,Shapely, OSMnx, ...,
+                        familiar with the most popular geo-data formats: JSON, CSV, XML, ... </p>
+                    <p>use R to implement statistical modeling: SVM, Logit Models, GWR...</p>
                 </div><!-- end of service-->
                 <div class="service">
                     <h3>Interactive Cartography</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make 
-                    a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged.</p>
+                    <p>specilize in  HTML/CSS/JavaScript to create interactive map websites, along with many popular map libraries: 
+                        Mapbox js GL, Leaflet.js, Turf.js, ArcGIS RESTful API, GoogleMaps API, foursquare API, HERE API, ...
+                    </p>
+                    <p>implement JavaScript map visualization libraries: d3.js, ArcGIS API, Leaflet.js, ...</p>
                 </div> <!-- end of service-->
                 <div class="service">
-                    <h3>Map design</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make 
-                    a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged.</p>
+                    <h3>Map</br>design</h3>
+                    <p>create maps with combination of multiple technologies: ArcGIS Pro, ArcMap, ArcGIS Online, Mapbox Studio, Illustrator, DataShader, ...</p>
+                </div> <!-- end of service-->
+                <div class="service">
+                    <h3>Database Manipulation</h3>
+                    <p>create ER-diagram and relational Schema.</p>
+                    <p>use PostgresSQL, PostGIS for geospatial data query and management</p>
                 </div> <!-- end of service-->
             </div> <!-- end of services-->
-            <a href="#work" class="btn">My work</a>
+            <a href="#work" class="btn">My projects</a>
         </section>
 
         <!-- About me-->
         <section class = "about-me" id="about">
             <h2 class="section__title section__title--about">Who I am</h2>
-            <p class="section__subtitle section__subtitle--about">Master's in GIS / Cartography</p>
+            <p class="section__subtitle section__subtitle--about">Master's in GIS / Cartography @ UW - Madison</p>
 
             <div class="about-me__body">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since</p>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting in</p>
+                <p><strong>I love playing around location data</strong>.
+                <p>6+ years of experience in geospatial data analysis and geo-visualization.</p>
+                <p>Travelling is one of my favorites, which I can always find inspirations from, 
+                    so I create a lot of interactive map tools as well as visualization map related to tourism.
+                    I am really interested in inspecting spatial and temporal variability (heterogeneity) in each region
+                    by creating interactive maps and aim at making the most of them to make people a better life.
+                </p>
+                <p>To be NING ... ;)</p>
             </div>
 
             <img src="img/ynliu-03.png" alt="" class='about-me__img'>
@@ -94,27 +101,60 @@
 
         <!--My work-->
         <section class="my-work" id="work">
-            <h2 class="section__title">My Work</h2>
-            <p class ="section__subtitle">These projects are mainly on 3 skills: GIS (Big) Data Analysis, Interactive Cartography, and Map Design</p>
+            <h2 class="section__title">Project</h2>
+            <p class ="section__subtitle">These works are mainly on 3 skills: GIS (Big) Data Analysis,
+                 Interactive Cartography, and Map Design.</p>
+            <p></p>
 
             <div class="portfolio">
-                <a href="#" class = "portfolio__item">
-                    <img src="img/portfolio-1.jpg" alt="portfolio-1" class="portfolio__img">
+                <a data-modal-target="#modal1" class = "portfolio__item">
+                    <img src="img/portfolio-1.png" alt="campground-exploration" class="portfolio__img">
+                    <div class="text-overlay">
+                        <div class="text">Campground Exploration</div>
+                    </div>
                 </a>
-                <a href="#" class = "portfolio__item">
-                    <img src="img/portfolio-2.jpg" alt="portfolio-2" class="portfolio__img">
+                <a data-modal-target="#modal2" class = "portfolio__item">
+                    <img src="img/portfolio-2.png" alt="elephant-trade" class="portfolio__img">
+                    <div class="text-overlay">
+                        <div class="text">Elephant Trade</div>
+                    </div>
                 </a>
-                <a href="#" class = "portfolio__item">
-                    <img src="img/portfolio-3.jpg" alt="portfolio-3" class="portfolio__img">
+                <a data-modal-target="#modal3" class = "portfolio__item">
+                    <img src="img/portfolio-3.png" alt="northern-palette" class="portfolio__img">
+                    <div class="text-overlay">
+                        <div class="text">northern Palette</div>
+                    </div>
                 </a>
-                <a href="#" class = "portfolio__item">
-                    <img src="img/portfolio-4.jpg" alt="portfolio-4" class="portfolio__img">
+                <a data-modal-target="#modal4" class = "portfolio__item">
+                    <img src="img/portfolio-4.png" alt="busiest-amtrak" class="portfolio__img">
+                    <div class="text-overlay">
+                        <div class="text">Busiest Amtrak</div>
+                    </div>
                 </a>
-                <a href="#" class = "portfolio__item">
-                    <img src="img/portfolio-5.jpg" alt="portfolio-5" class="portfolio__img">
+                <a class = "portfolio__item">
+                    <img src="img/portfolio-5.png" alt="save-the-elephant" class="portfolio__img">
+                    <div class="text-overlay">
+                        <div class="text">Save the Elephant</div>
+                    </div>
                 </a>
-                <a href="#" class = "portfolio__item">
-                    <img src="img/portfolio-6.jpg" alt="portfolio-6" class="portfolio__img">
+                <a class = "portfolio__item">
+                    <img src="img/portfolio-6.png" alt="africa" class="portfolio__img">
+                    <div class="text-overlay">
+                        <div class="text">Africa Physical Geography</div>
+                    </div>
+                </a>
+                <a class = "portfolio__item">
+                    <img src="img/portfolio-7.png" alt="nps-oregon" class="portfolio__img">
+                    <div class="text-overlay">
+                        <div class="text">NPS in Oregon</div>
+                    </div>
+                </a>
+                
+                <a class = "portfolio__item">
+                    <img src="img/portfolio-8.png" alt="i-blossom" class="portfolio__img">
+                    <div class="text-overlay">
+                        <div class="text">I ♥ Blossom</div>
+                    </div>
                 </a>
             </div>
         </section>
@@ -147,6 +187,101 @@
             </ul>
 
         </footer>
+
+        <!--pop up -->
+        <div class="modal" id="modal1">
+          <div class="modal-header">
+            <div class="title">
+                <a href="https://tooobening.github.io/campground-exploration/"><h3>Campground Exploration</h3>
+            </div>
+            <button data-close-button class="close-button">&times;</button>
+          </div>
+          <div class="modal-body">
+            <img src='img/portfolio-01.png' class = "modal__img">
+            <p>A Web Tool in Interactive Cartography</p></a>
+            <p> As a hard working citizen living in big cities and with increasing interest in outdoor activities, 
+                a weekend trip in nature will probably serve as the best comforts, 
+                but some of them don’t want to be too “off the grid” while make a brief excursion in nature, 
+                who are exactly what this planning tool works for.</p>
+            <p> As the development of the camping related apps on the mobile devices , 
+                such as The Dyrt, Recreation.gov, Campendium , Boondo cking, Hipcamp, 
+                the people of outdoor type always benefit from these map based apps when or before hitting
+                the road to stay connected to the wild. While they are mostly designed in app
+                form and usually focused on the diversity of the camping styles, the Campground
+                Exploration is an applicat ion in web from which features the urban function with
+                the campsites nearby . How citizen s connect each other where ver is between cities
+                and nature is the main concern of this application. You can check out the Code on my Github.</p>
+          </div>
+        </div>
+        <div id="overlay"></div>
+
+        <div class="modal" id="modal2">
+            <div class="modal-header">
+                <div class="title">
+                    <a href="https://tooobening.github.io/elephant-trade/"><h3>Elephant trade</h3>
+                </div>
+              <button data-close-button class="close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img src='img/portfolio-02.png' class = "modal__img">
+                <p>A visualization interactive map with bar chart.</p></a>
+                <p> With most record of trade in elephants-related term (e.g. ivory, live specimens, skins, etc.) in 2015-2019. 
+                    The trade can be classified into several types based on defined purposes: Educational, Scientific, Medical, 
+                    Circus/Travelling exhibition, Hunting trophy, Law enforcement / judicial / forensic, Commercial and unknown. 
+                    In this chart below, Educational, Scientific, Medical, Judicial are combinded to "others' type, 
+                    for there is relatively records with less than for 10 each purpose.</p>
+                <p> In this tool, you can select the different purpose of exporting to inspect 
+                    differnt spatial pattern of varied purpose of trade.Codes are public on my Github.</p>
+            </div>
+        </div>
+        <div id="overlay"></div>
+
+        <div class="modal" id="modal3">
+            <div class="modal-header">
+                <div class='title'> 
+                    <a href="https://tooobening.github.io/northern-palette/"><h3>Northern Palette - Find northern light near you</h3>
+                </div>    
+                <button data-close-button class="close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img src='img/portfolio-03.png' class = "modal__img">
+                <p>A Web Tool in spatial search and visualization</p></a>
+                <p>Possible Persona: A photographer is working for the National Geographic. 
+                    He has been always interested in spectacular landscape around the world in the nature. 
+                    The special column he is currently working on is about the diversity of northern lights. 
+                    Before heading off a trip chasing for lights, it would be better if some patterns of northern lights have been explored. 
+                    He would like to delve into some data which is present-to-date. For example, 
+                    which places is closest as well as most popular for him to have the chance to collect the photos of the northern lights, 
+                    where is most travellers are going to take the photos of the unique pink northern lights 
+                    and which months most photos of the northern lights are taken by people. 
+                    These interesting questions are some of the topics he may want to figure out. 
+                    That is, he needs to rank and compare several sites where these spectacular images are clustered geographically. 
+                    Using this interactive map, he also might inspect the trend of the northern lights happening, 
+                    such as which month presents the peak of people taking those photos and posting on social media.
+                    Codes are public on my Github.</p>
+
+                </p>
+            </div>
+        </div>
+        <div id="overlay"></div>
+
+        <div class="modal" id="modal4">
+            <div class="modal-header">
+                <div class='title'> 
+                    <a href="https://tooobening.github.io/busiest-amtrak/"><h3>Busiest Amtrak</h3>
+                </div> 
+              <button data-close-button class="close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img src='img/portfolio-04.png' class = "modal__img">
+                <p>A Visualization bubble Map with sliders</p></a>
+                <p>This proportional interactive map consist of top 20 Amtrak Station in U.S. with most passengers
+                    check-in and check-out. Check out my Github to see how this basic yet amazing function works for all the mappers!</p>
+
+                </p>
+            </div>
+        </div>
+        <div id="overlay"></div>
 
 
         <!--you can also use this space for internal scripts;
