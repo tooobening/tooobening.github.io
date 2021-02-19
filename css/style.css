@@ -293,7 +293,7 @@ header {
         grid-row: 2;
         text-align: right;
         position: relative;
-        left: -0.1em;
+        left: 3em;
         width: clac(100% + 0.1em);
     }
 }
